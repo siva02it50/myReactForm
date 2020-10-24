@@ -16,18 +16,7 @@ const FormSignup = ({ submitForm }) => {
           Get started with us today! Create your account by filling out the
           information below.
         </h1>
-        <div className='form-inputs'>
-          <label className='form-label'>Username</label>
-          <input
-            className='form-input'
-            type='text'
-            name='username'
-            placeholder='Enter your username'
-            value={values.username}
-            onChange={handleChange}
-          />
-          {errors.username && <p>{errors.username}</p>}
-        </div>
+        
         <div className='form-inputs'>
           <label className='form-label'>Email</label>
           <input
@@ -64,12 +53,33 @@ const FormSignup = ({ submitForm }) => {
           />
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
-        <button className='form-input-btn' type='submit'>
+       <div className='form-inputs'>
+          <label className='form-label'>Date Of Birth</label>
+          <input
+            className='form-input'
+            type='text'
+            name='dateofbirth'
+            placeholder='Enter your DOB'
+            value={values.dob}
+            onChange={handleChange}
+          />
+          {errors.dob && <p>{errors.dob}</p>}
+        </div>    
+        <div className='form-inputs'>
+          <label className='form-label'>Phone Number</label>
+          <input
+            className='form-input'
+            type='text'
+            name='phoneno'
+            placeholder='Enter your Phone Number'
+            value={values.phoneno}
+            onChange={handleChange}
+          />
+          {errors.phoneno && <p>{errors.phoneno}</p>}
+        </div>
+    <button className='form-input-btn' type='submit'>
           Sign up
         </button>
-        <span className='form-input-login'>
-          Already have an account? Login <a href='#'>here</a>
-        </span>
       </form>
     </div>
   );
