@@ -3,6 +3,12 @@ import './Form.css';
 import FormSignup from './FormSignup';
 import FormSuccess from './FormSuccess';
 
+import { Button } from '@material-ui/core';
+
+function App() {
+  return <Button color="primary">Sample React Form</Button>;
+}
+
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
