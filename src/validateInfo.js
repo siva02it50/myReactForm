@@ -21,10 +21,21 @@ export default function validateInfo(values) {
   
   if (!values.phoneno) {
     errors.phoneno = 'Phone number is required';
-  } else if (values.phoneno.length < 10) {
-    errors.password2 = 'Phone number is invalid';
-  }
-   
+  }  else  {
+            var pattern = /^(0[1-9]|1[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/([0-9]{4})$/; 
+            if (!pattern.test(phoneno)) {    
+                errors.phoneno = "Invalid Phone number";    
+            }  
+  
+  if (!values.dob) {
+    errors.dob = 'Please select DOB;
+  } else  {
+            var pattern = /^(0[1-9]|1[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/([0-9]{4})$/; 
+            if (!pattern.test(dob)) {    
+                errors.dob = "Invalid date of birth";    
+            }  
+  
+   ;
   
   return errors;
 }
